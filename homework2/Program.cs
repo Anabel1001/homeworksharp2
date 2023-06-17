@@ -3,29 +3,30 @@
 // 782 -> 8
 // 918 -> 1
 
-// int result = new Random().Next(100, 1000);
-// System.Console.WriteLine(result);
-// int secondnum = (result/10) % 10;
-// System.Console.WriteLine($"{secondnum}");
+int result = new Random().Next(100, 1000);
+System.Console.WriteLine(result);
+int secondnum = (result/10) % 10;
+System.Console.WriteLine($"{secondnum}");
 
 // Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
 // 645 -> 5
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
-// System.Console.WriteLine("Введите любое число");
-// int number = Convert.ToInt32(Console.ReadLine());
-// System.Console.WriteLine(number);
-// if int number > 999
-// {
-//     int result = (number/10) %10;
-//     System.Console.WriteLine(result);
-// }
-// else {
-//     int number < 100
-//     System.Console.WriteLine("В числе меньше трех цифр");
-// }
-
+Console.WriteLine("Введите любое число");
+int number = Convert.ToInt32(Console.ReadLine());
+if (number/100<=0)
+{
+    Console.WriteLine("Такой цифры нет.");
+}
+else
+{
+    while ( number/1000 > 0 )
+    {
+        number /= 10;
+    }
+    Console.WriteLine(number%10);
+}
 
 // Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
 // 6 -> да
